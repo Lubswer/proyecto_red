@@ -202,3 +202,57 @@ body {
     border-radius: 40px;
   }
 }
+.campana-notificaciones {
+    position: fixed;
+    bottom: 25px;
+    right: 25px;
+    z-index: 3000;
+    cursor: pointer;
+}
+
+.campana-notificaciones i {
+    font-size: 40px;
+    color: #ffcc00;
+}
+
+.badgeNoti {
+    position: absolute;
+    top: -5px;
+    right: -10px;
+    background: red;
+    color: white;
+    padding: 3px 7px;
+    border-radius: 50%;
+    font-size: 12px;
+}
+
+#listaNotificaciones {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    width: 260px;
+    max-height: 320px;
+    overflow-y: auto;
+    background: #222;
+    color: #fff;
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(0 0 0 / 0.5);
+}
+
+.lista-oculta {
+    display: none;
+}
+
+.notificacion-item {
+    background: #333;
+    padding: 8px;
+    margin-bottom: 6px;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+.notificacion-item.success { border-left: 4px solid #4caf50; }
+.notificacion-item.error   { border-left: 4px solid #f44336; }
+.notificacion-item.info    { border-left: 4px solid #2196f3; }
+
