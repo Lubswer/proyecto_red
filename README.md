@@ -1,2 +1,2 @@
-# proyecto_red
-Disenio_proyecto
+# D_Proyecto
+Proyecto de Diseño

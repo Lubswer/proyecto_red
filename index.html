@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ALU | Plataforma de aprendizaje</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;800&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    
+    <link rel="stylesheet" href="css/index.css">
+</head>
+<body>
+
+    <header class="barra-navegacion">
+        <div class="logo">
+            <i class="fa-solid fa-building-columns"></i> ALU
+        </div>
+        
+        <nav class="menu">
+            <a href="#tutorial">TUTORIAL</a>
+            <a href="#seccion-login">Login</a>
+            <a href="registro.html" class="boton-menu">Regístrate</a>
+        </nav>
+    </header>
+
+    <section class="portada">
+        <h1>COMPARTE Y BUSCA <br>ALU</h1>
+        <p>Tu espacio digital para aprender, conectar y colaborar.</p>
+        
+        <a href="registro.html">
+            <button class="boton-principal">Comienza Ahora</button>
+        </a>
+    </section>
+
+    <section class="contenedores-info">
+        
+        <div class="tarjeta">
+            <div class="icono-tarjeta">
+                <i class="fa-solid fa-book"></i>
+            </div>
+            <h3>CONTENIDO</h3>
+            <p>Recursos seleccionados por facultad.</p>
+        </div>
+
+        <div class="tarjeta">
+            <div class="icono-tarjeta">
+                <i class="fa-solid fa-users"></i>
+            </div>
+            <h3>COMUNIDAD</h3>
+            <p>Conecta con estudiantes de todas las facultades.</p>
+        </div>
+
+        <div class="tarjeta">
+            <div class="icono-tarjeta">
+                <i class="fa-solid fa-comments"></i>
+            </div>
+            <h3>CHAT</h3>
+            <p>Chatea con estudiantes que comparten tus intereses.</p>
+        </div>
+
+    </section>
+
+    <section class="seccion-video" id ="tutorial">
+        <div class="conocenos"><p class="titulo-pequeno">CONOCENOS AQUI</p> </div>
+        
+        <div class="marco-video">
+             <iframe src="https://www.youtube.com/embed/GtL1huin9EE?si=mcwBg4X3QGDbH_pP" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+        </div>
+    </section>
+
+    <footer id="seccion-login">
+        
+        <div class="contenedor-footer">
+            
+            <div class="columna-izquierda">
+                <h2>UNETE<br>AHORA</h2>
+                <p>Siguenos en nustras redes sociales o al correo: contacto@alu.edu</p>
+                
+                <div class="redes-sociales">
+                    <a href="https://wa.me/qr/MWBE5A3S7EU7P1" target="_blank" class="boton-social">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
+                    <a href="https://x.com/lubswer" target="_blank" class="boton-social">
+                        <i class="fab fa-x-twitter"></i>
+                    </a>
+                    <a href="https://www.instagram.com/lubswer/" target="_blank" class="boton-social">
+                        <i class="fab fa-instagram"></i>
+                    </a>
+                </div>
+            </div>
+
+            <div class="columna-derecha">
+                <div class="cuadro-login" id="cuadro-login">
+                    <h3>ACCESO ESTUDIANTES</h3>
+                    
+                    <form id = "formLogin">
+                        <input type="text" placeholder="Correo electrónico" class="entrada-texto" id = "logEmail">
+                        <input type="password" placeholder="Contraseña" class="entrada-texto" id = "logPassword">
+
+                        <div class="opcion-recordar">
+                            <input type="checkbox"> Recordar usuario
+                        </div>
+
+                       <button type="submit" class="boton-ingresar">INGRESAR </button>
+                        
+                        <p class="texto-registro">
+                            ¿No tienes cuenta? <a href="registro.html">Regístrate</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+
+        </div>
+        
+        <div class="pie-copyright">
+            ALU © 2025. Todos los derechos reservados.
+        </div>
+
+    </footer>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css">
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+<script src="javascript/index.js"></script>
+
+</body>
+</html>

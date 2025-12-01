@@ -1,0 +1,42 @@
+<head>
+    <meta charset="UTF-8"> <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Registro</title>
+    <link rel="stylesheet" href="css/registro.css">
+</head>
+<body>
+  <main class="container">
+
+    <img src="imagenes/libros.png" alt="">
+   
+    <div class="form-side">
+      <div class="form-box" id = "registroCard" >
+        <h1>Registro</h1>
+
+        <form id = "formRegistro">
+          <label for="nombre">Nombre Completo</label>
+          <input type="text" id="regNombre" name="nombre">
+
+          <label for="email">Email</label>
+          <input type="email" id="regEmail" name="email">
+
+          <label for="usuario">Nombre de usuario</label>
+          <input type="text" id="regUsuario" name="usuario">
+
+          <label for="contraseña">Contraseña</label>
+          <input type="password" id="regPassword" name="contraseña">
+
+          <label for="verifique">Verifique contraseña</label>
+          <input type="password" id="regVerificar" name="verifique">
+
+          <button type="submit">Registrarse</button>
+        </form>
+      </div>
+    </div>
+  </main>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="javascript/registro.js"></script>
+  
+</body>
+</html>
