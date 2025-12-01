@@ -1,3 +1,10 @@
+const usuario = JSON.parse(localStorage.getItem("datosUsuario"));
+
+if (usuario && usuario.foto) {
+  document.getElementById("fotoPerfil").src = usuario.foto;
+}
+
+
 function inicializarBuscador() {
   const header = document.querySelector('.facultades-header');
   

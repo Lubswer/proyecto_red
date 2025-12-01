@@ -67,7 +67,8 @@ function manejarPublicacionDOM(event) {
             icon: 'error',
             title: 'Error de Publicación',
             text: 'La descripción debe tener al menos 10 caracteres.',
-            confirmButtonColor: '#3085d6'
+            timer: 1000,
+            showConfirmButton: false
         });
         return;
     }
@@ -77,7 +78,8 @@ function manejarPublicacionDOM(event) {
             icon: 'error',
             title: 'Error de Publicación',
             text: 'Debes adjuntar un archivo para publicar.',
-            confirmButtonColor: '#3085d6'
+            timer: 1000,
+            showConfirmButton: false
         });
         return;
     }
@@ -97,7 +99,8 @@ function manejarPublicacionDOM(event) {
         icon: 'success',
         title: '¡Publicación Exitosa!',
         text: 'Tu contenido ha sido añadido a la página (visible localmente).',
-        confirmButtonColor: '#3085d6'
+        timer: 1000,
+        showConfirmButton: false
     });
     event.target.reset();
 }
