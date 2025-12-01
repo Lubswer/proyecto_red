@@ -146,10 +146,12 @@ header i{
     flex-direction: column;
     border-radius: 30px;
     overflow-y: auto;
+    overflow-x: hidden;
     scrollbar-width: thin;
     scrollbar-color: #ffffff #0000005a;
     border-top: none;
     gap: 30px;
+
    
 }
 .subidos h3{
@@ -181,7 +183,7 @@ header i{
 }
 .post:hover {
   transform: translateY(-2px);
-  box-shadow: 0 10px 24px rgba(95, 95, 95, 0.611);
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.993);
 }
 .info button:hover {
   transform: translateY(-2px);
@@ -578,6 +580,18 @@ h4{
         width: 200px;
         height: 200px; /*Para que la imagen del perfil no este muy grande*/
     }
+    .modal-contenido {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    }
+    .fila-2 {
+
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
 
     
 }

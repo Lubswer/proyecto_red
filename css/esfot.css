@@ -363,6 +363,9 @@ main {
   .form-grupo label{
     display: flex;
   }
+  .form-grupo textarea{
+    width: 100%;
+  }
   .form-grupo input{
     width: 100%;
   }

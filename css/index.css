@@ -364,5 +364,8 @@ footer {
     gap: 100px;
     align-items: center;
     justify-content: center;
-}
+    }
+    .conocenos {
+        width: 100%;
+    }   
 }
