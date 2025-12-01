@@ -1,0 +1,138 @@
+/* ==================================================
+   PÁGINA DE REGISTRO COMPLETA (CON LADO GRIS)
+================================================== */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", monospace;
+  color: rgb(255, 255, 255);
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #050505;
+}
+
+/* Lado izquierdo gris */
+img {
+  flex: 1;
+  background-color: #767575;
+  margin-left: -2000px;
+
+}
+
+/* Lado derecho con formulario */
+.form-side {
+  flex: 2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Caja del formulario */
+.form-box {
+  background-color: rgba(255, 255, 255, 0.03);
+  padding: 40px;
+  border-radius: 40px;
+  width: 400px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.086);
+}
+
+.form-box h1 {
+  font-size: 32px;
+  margin-bottom: 20px;
+  font-weight: normal;
+}
+
+/* Inputs y etiquetas */
+form {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+label {
+  font-size: 14px;
+}
+
+.form-side input {
+  width: 100%;
+  height: 28px;
+  background-color: #3736363c;
+  border: none;
+  outline: none;
+  border-radius: 2px;
+  padding: 4px;
+}
+
+/* Botón */
+button {
+  align-self: flex-end;
+  margin-top: 15px;
+  background-color: #100f0f;
+  border: 1px solid #ffffff33;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  background-color: #131212;
+   box-shadow: #dddddd60 0px 0px 20px;
+}
+button a{
+  text-decoration: none;
+  color: black;
+
+}
+
+/* ==================================================
+   RESPONSIVE
+================================================== */
+@media (max-width: 768px) {
+
+  /* Página de registro */
+  .container {
+    flex-direction: column;
+  }
+
+  img {
+    margin-top: -900px;
+
+  }
+
+  .form-side {
+    flex: none;
+    padding: 20px;
+  }
+
+  .form-box {
+    width: 100%;
+    border-radius: 60px;
+    padding: 30px;
+  }
+
+  .form-box h1 {
+    font-size: 36px;
+  }
+
+  input {
+    height: 34px;
+  }
+
+  button {
+    align-self: center;
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+  }
+}

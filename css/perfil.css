@@ -1,0 +1,583 @@
+*{
+    color: rgb(255, 252, 252);
+    margin: 0;
+}
+body{
+    background-color: #191c21;
+    display: flex;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 45px;   
+}
+main{
+    display: flex;
+    justify-content: space-between;
+    width: 63%;
+    height: 730px;
+    
+}
+header h3{
+    height: 10%;
+    border-bottom: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: top; 
+    width: 100%;
+    border-radius: 15px;
+    background-color:#282c30c2;
+    font-size: 35px;
+    border: 1px solid rgba(107, 104, 104, 0.405);
+
+
+}
+header{
+    background-color: rgba(49, 49, 49, 0.115);
+    width: 30%;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 20px;
+    gap: 10px;
+    border-top: none;
+    
+
+}
+.foto{
+    width: 100%;
+    height: 35%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.fila-2 img{
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #393a3cc2;
+}
+.foto img{
+    width: 40%;
+    height: 75%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+}
+header i{
+    color: rgb(255, 252, 252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 4px solid #393a3cc2;
+}
+.datos{
+    background-color: rgba(227, 0, 0, 0);
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    height: 10%;
+    margin: 0;   
+}
+.informacion{
+    display: flex;
+    flex-direction: column;
+    background-color: #1665ee00;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    border-radius: 20px;
+    text-align: center;
+    height: 30%;
+}
+.info{
+    display: flex;
+    flex-direction: column;
+    background-color: #282c30c2;
+    width: 70%;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    border-radius: 20px;
+    border: 1px solid rgb(52, 52, 52); 
+    text-align: center;
+    height: 30%;
+    gap: 20px;
+    height: 100%;
+
+}
+
+.info ul{
+    list-style: none;
+    text-align: center;
+    padding: 0;
+    gap: 10px;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.info button{
+    color: rgb(255, 255, 255);
+    background-color: #4A4D51;
+    border-radius: 10px;
+    border: none;
+    font-size: 20px;
+    margin-bottom: 4px;
+    cursor: pointer;
+    width: 70%;
+    height: 20%;
+    border: 1px solid rgba(136, 136, 136, 0.405);
+    
+}
+.subidos{
+    background-color: rgba(49, 49, 49, 0.115);
+    border: 1px solid #404245;
+    width: 55%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    border-radius: 30px;
+    overflow-y: auto;
+    scrollbar-width: thin;
+    scrollbar-color: #ffffff #0000005a;
+    border-top: none;
+    gap: 30px;
+   
+}
+.subidos h3{
+    height: 10%;
+    border-bottom: none; 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: top; 
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.035) ;
+    border: 1px solid rgba(107, 104, 104, 0.405);
+    font-size: 35px;  
+   
+}
+
+.post{
+    display: flex;
+    flex-direction: column;
+    background-color:  #282c30c2;
+    border: 1px solid #474a4ec2;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    width: 97%; 
+    margin: auto;
+    border-radius: 20px
+
+    
+}
+.post:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(95, 95, 95, 0.611);
+}
+.info button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 24px rgba(19, 19, 19, 0.881);
+}
+
+.encabezado{
+    display: flex;
+    justify-content: space-between;
+}
+.info_usuario{
+    margin-top: 5px;
+    display: flex;
+    gap: 15px;
+    margin-left: 15px;
+    display: flex;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.btn_publicacion{
+    display: flex;
+    justify-content: end;
+    align-items: center;
+}
+.btn_publicacion button{
+    margin: 0;
+    background-color: #4A4D51;
+    margin-right: 15px;
+    width: 100%;
+    height: 40%;
+    border: none;
+    border-radius: 20%;
+    cursor: pointer;
+    color: #ffffff;
+    border: 1px solid #474a4ec2;
+
+}
+
+.encabezado img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.encabezado i{
+    color: rgb(255, 252, 252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.publicacion{
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    margin-left: 15px;
+    
+}
+
+.publicacion img{
+    width: 40%;
+    margin: auto;
+}
+.publicacion i{
+    color: rgb(255, 252, 252);
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.acciones{
+    display: flex;
+    justify-content: start;
+    margin-right: 15px;
+}
+.acciones img{
+    width: 29px;
+    height: 30px;
+    background-color: rgba(240, 248, 255, 0);
+    filter: invert(36%) sepia(93%) saturate(7484%) hue-rotate(247deg) brightness(95%) contrast(94%);
+}
+.acciones i{
+    color: rgb(255, 252, 252);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.acciones button{
+    background-color: rgba(240, 248, 255, 0);
+    border: none;
+    margin-left: 40px;
+    margin-bottom: 3px;
+    cursor: pointer;
+}
+.otros{
+
+    width: 40%;
+    border-radius: 30px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    justify-content: center;
+    align-items: center;
+   
+
+
+}
+.areas{
+    
+    background-color: rgba(49, 49, 49, 0.115);
+    width: 90%;
+    border: 1px solid rgba(107, 104, 104, 0.405);    
+    border-radius: 10px;
+    height: 40%;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    border-top: none;
+    
+}
+.otros h3{
+    border: 1px solid rgba(107, 104, 104, 0.405);
+    width: 100%;
+    border-radius: 10px;
+    background-color: #282c30c2;
+    height: 14%;
+    display: flex;
+    justify-content: center;
+    align-items: center
+
+    
+}
+.areas li{
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+
+}
+.areas ul{
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0; 
+    gap: 10px;
+    
+}
+h4{
+    background-color: #46474845;
+    border-radius: 12px;
+}
+.proyectos h3{
+    width: 100%;
+}
+   
+.proyectos{
+    border: 1px solid rgba(107, 104, 104, 0.405);
+    background-color: rgba(49, 49, 49, 0.115);
+    width: 90%;  
+    border-radius: 10px;
+    height: 25%;
+    margin-top: 15px;
+    align-items: center;
+    justify-content: start;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.proyectos ul{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    gap: 10px;
+}
+.proyectos li{
+    list-style: none;
+    background-color: #46474845;
+    border-radius: 5px;
+
+}
+.navegar{
+    width: 90%;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
+    height: 25%;
+}
+.navegar button{
+
+    margin: auto;
+    color: rgb(235, 234, 234);
+    background-color:#4A4D51;
+    border-radius: 10px;
+    border: none;
+    margin-bottom: 4px;
+    cursor: pointer;
+    width: 70%;
+    height: 30%;
+    font-size: 20px;
+
+}
+.navegar a{
+    margin: auto;
+    color: #4A4D51;
+    background-color: #4A4D51;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    width: 70%;
+    height: 30%;
+    display: flex;
+    text-align: center;
+    border: 1px solid rgba(139, 139, 139, 0.405);
+
+}
+.navegar a button{
+    margin: auto;
+    color: rgb(255, 255, 255);
+    background-color: rgb#4A4D51;
+    cursor: pointer;
+    font-size: 30px;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+   
+}
+
+
+.navegar span{
+    display: flex;
+    border-radius: 10px;
+    margin: auto;
+    background-color: rgb(51, 51, 51);
+    width: 40%;
+    height: 20%;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(139, 139, 139, 0.405);
+    
+;
+}
+/* Fondo del modal */
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    backdrop-filter: blur(4px);
+    justify-content: center;
+    align-items: center;
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* Caja del modal */
+.modal-contenido {
+     border: 1px solid rgba(83, 82, 82, 0.678);
+    background: rgba(25, 25, 25, 0.85);
+    padding: 25px;
+    border-radius: 14px;
+    width: 90%;
+    color: rgb(0, 0, 0);
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    gap: 15px;
+    margin-top: 200px;
+
+}
+.modal-titulo {
+    grid-column: span 2;
+    color: white;
+    margin: 0;  
+    display: flex;
+    gap: 40px;
+    align-items: center;
+    width: 200px;
+}
+
+/* Botón cerrar */
+.cerrar {
+    float: right;
+    cursor: pointer;
+    font-size: 28px;
+}
+
+/* Bloques */
+.modal-contenido div {
+    background: rgba(255, 255, 255, 0.05);
+    padding: 12px;
+    border-radius: 8px;
+    margin-bottom: 18px;
+ 
+}
+
+/* Estilo general para inputs */
+.modal-contenido input {
+    width: 90%;
+    padding: 8px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    color: black;
+}
+.fila-2 {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+
+}
+
+
+/* Botón guardar */
+.guardarCambios {
+    width: 100%;
+    padding: 12px;
+    background: #0c0c0d;
+    border: none;
+    color: white;
+    border-radius: 6px;
+    margin-top: 10px;
+    cursor: pointer;
+    border: 1px solid rgba(139, 139, 139, 0.405);
+}
+
+
+/*Para hacerlo responsive*/
+@media (max-width:950px){
+    /*Para definir el orden */
+    header{
+        order: 0;
+    }
+    .otros{
+        order: 3;
+        
+    }
+    .subidos{
+        order: 2;
+        display: flex;
+        overflow-y: auto;
+        flex-direction: row;
+    }
+    .subidos h3{
+        display: none;
+    }
+    body{
+        flex-direction: column;
+        align-items: center;
+        margin-top: 20px;
+        gap: 25px;
+    }
+    main{
+        flex-direction: column;
+        width:90%;
+        height:auto;
+        gap:25px;
+    }
+    header, .subidos, .otros {
+        width:100%;
+        
+    }
+    header{
+        width: 90%;
+        gap: 25px;
+    }
+    /*Para que los botones de .otros se vean bien*/
+        .navegar {
+        flex-direction: column;
+        gap: 15px; /* para separar todos los elementos */
+        padding: 10px;
+    }
+
+    .navegar span {
+        margin-bottom: 10px; /* para darle espacio extra debajo del span */
+        width: 60%; /*para que sea un poco más ancho*/
+        height: 25%;
+    }
+
+    .navegar button {
+        width: 80%;
+        height: 35px;
+    }
+    .foto img{
+        width: 200px;
+        height: 200px; /*Para que la imagen del perfil no este muy grande*/
+    }
+
+    
+}
