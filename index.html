@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ALU | Plataforma de aprendizaje</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@200;400;600;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="
+h-screen
+m-0 p-0 
+box-border 
+font-['Outfit']
+text-white bg-fixed          
+bg-[#050505]
+bg-[radial-gradient(circle_at_top_center,_#1a1a1a,_#050505)]
+">
+  <!-- HEADER -->
+  <header class="
+fixed 
+top-0 
+w-full 
+px-[5%] 
+py-5 
+flex 
+justify-between 
+items-center
+bg-[rgba(5,5,5,0.9)] 
+border-b
+border-white/10 
+z-[100]
+">
+
+    <div class="
+  text-2xl 
+  font-extrabold 
+  tracking-[-1px]">
+      <i class="fa-solid fa-building-columns w-[40px]"></i>
+      ALU
+    </div>
+
+    <nav class="
+  flex 
+  items-center
+  ">
+      <a href="#tutorial" class="
+    ml-5 
+    text-sm 
+    font-semibold 
+    uppercase 
+    text-[#888]
+    hover:text-white" id = "video">Tutorial</a>
+      <a href="#seccion-login" action="click" id="Login" class="
+    ml-5 
+    text-sm 
+    font-semibold 
+    uppercase 
+    text-[#888] 
+    hover:text-white">Login</a>
+      <a href="registro.html" class="
+    ml-5 
+    border 
+    border-white/30 
+    px-5 
+    py-2 
+    rounded 
+    text-white
+    transition-all
+    duration-700 
+    hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] 
+    hover:rounded-2xl 
+    hover:cursor-pointer 
+    ">
+        Regístrate
+      </a>
+    </nav>
+  </header>
+
+  <!-- HERO -->
+  <section class="
+text-center 
+pt-[140px] 
+h-[55%]
+">
+    <h1 class="
+  text-[80px] 
+  leading-none 
+  font-extrabold 
+  mb-5
+  bg-gradient-to-b
+  from-white to-gray-500
+  text-transparent bg-clip-text">
+      COMPARTE Y BUSCA <br> ALU
+    </h1>
+
+    <p class="text-[#d6d6d6] text-lg mb-10">
+      Tu espacio digital para aprender, conectar y colaborar.
+    </p>
+
+    
+    <button class="
+    bg-transparent
+    text-white 
+    border 
+    border-white/30
+    px-[30px] 
+    py-[15px] 
+    text-lg
+    font-bold 
+    tracking-[2px]
+    rounded 
+    transition-all
+    duration-700
+    hover:shadow-[0_0_20px_rgba(255,255,255,0.3)] 
+    hover:rounded-2xl
+    hover:cursor-pointer" id = "btnComenzar">
+        Comienza Ahora
+      </button>
+  </section>
+
+  <!-- TARJETAS -->
+  <section class="
+
+h-[35%]
+flex 
+justify-center 
+flex-wrap 
+gap-[30px] 
+px-[5%] 
+py-[50px]">
+
+    <div class="
+  w-[300px] 
+  p-10 
+  rounded-[15px]
+  bg-white/5 
+  border 
+  border-white/10
+  transition 
+  duration-700
+  hover:-translate-y-1
+  hover:border-white/40">
+      <div class="
+    text-[30px] 
+    mb-5"><i class="fa-solid fa-book"></i></div>
+      <h3 class="mb-2">CONTENIDO</h3>
+      <p class="text-[#888] text-sm">Recursos seleccionados por facultad.</p>
+    </div>
+
+    <div class="
+  w-[300px] 
+  p-10 
+  rounded-[15px]
+  bg-white/5 
+  border 
+  border-white/10
+  transition
+  duration-700 
+  hover:-translate-y-1 
+  hover:border-white/40">
+      <div class="
+    text-[30px] 
+    mb-5"><i class="fa-solid fa-users"></i></div>
+      <h3 class="mb-2">COMUNIDAD</h3>
+      <p class="
+    text-[#888] 
+    text-sm">Conecta con estudiantes de todas las facultades.</p>
+    </div>
+
+    <div class="
+  w-[300px] 
+  p-10 
+  rounded-[15px]
+  bg-white/5 
+  border 
+  border-white/10
+  transition 
+  duration-700 
+  hover:-translate-y-1 
+  hover:border-white/40">
+      <div class="
+    text-[30px] 
+    mb-5"><i class="fa-solid fa-comments"></i></div>
+      <h3 class="mb-2">CHAT</h3>
+      <p class="
+    text-[#888] 
+    text-sm">Chatea con estudiantes que comparten tus intereses.</p>
+    </div>
+  </section>
+  <footer class="
+w-full
+h-[10%]
+text-white
+justify-between
+px-[4%]
+flex
+items-center
+border-[#f1f1f13d]
+border-t-[1px]
+
+">
+    <div>
+      ©Todos los derechos revervados por ALU
+    </div>
+    <div class="flex gap-10">
+
+      <a href="https://www.instagram.com/">
+        <i class="
+fa-brands 
+fa-instagram
+text-[35px]
+transition
+duration-700
+hover:bg-[#ffffffc2]
+p-[11px]
+px-[13px]
+rounded-[50%]
+hover:text-black
+hover:shadow-[0_0_20px_rgb(255,255,255,0.3)]
+cursor-pointer
+"></i>
+      </a>
+
+      <a href="https://www.facebook.com/">
+        <i class="
+fa-brands 
+fa-facebook-f
+text-[35px]
+transition
+duration-700
+hover:bg-[#ffffffc2]
+p-[11px]
+px-[17px]
+rounded-[50%]
+hover:text-black
+hover:shadow-[0_0_20px_rgb(255,255,255,0.3)]
+cursor-pointer
+"></i>
+      </a>
+
+      <a href="https://x.com/notifications">
+        <i class="
+fa-brands 
+fa-x-twitter
+text-[35px]
+transition
+duration-700
+hover:bg-[#ffffffc2]
+p-[11px]
+rounded-[50%]
+hover:text-black
+hover:shadow-[0_0_20px_rgb(255,255,255,0.3)]
+cursor-pointer
+"></i>
+</a>
+</div>
+</footer>
+  <div class="
+  flex
+  flex-col
+  w-full
+  z-[100]
+  inset-0
+  h-full
+  justify-center
+  items-center
+  fixed
+  text-center
+  hidden
+  bg-[#03030363]
+  backdrop-blur-[3px]
+  " id = "viewLogin"
+  action = "click">
+
+  <div
+  class="
+  flex
+  justify-start
+  w-[20%]">
+  </div>
+    <div class="
+    flex
+    bg-[#0a0a0a]
+    h-[50%]
+    flex-col
+    justify-center
+    items-center
+    gap-[10%]
+    p-[2%]
+    rounded-[30px]
+    shadow-[0_0_20px_rgba(255,255,255,0.3)]
+   
+    " id="cuadro-login">
+
+    <h3>ACCESO ESTUDIANTES</h3>
+      
+
+      <form class = "
+      flex
+      flex-col
+      justify-center
+      items-center
+      gap-9
+      "id="formLogin">
+        <input class="
+        border-b
+        border-white
+        outline-none
+        " type="text" placeholder="Correo electrónico"  id="logEmail">
+        <input class="
+        border-b
+        outline-none
+        border-white
+        " type="password" placeholder="Contraseña" id="logPassword">
+
+        <div class="opcion-recordar">
+          <input type="checkbox"> Recordar usuario
+        </div>
+
+        <button type="submit" class="
+        border
+        border-[#8b8b8bad]
+        py-[5px]
+        px-[15px]
+        rounded-[30px]
+        hover:cursor-pointer
+        " id = "btnLogin" >INGRESAR </button>
+
+        <p class="texto-registro">
+          ¿No tienes cuenta? <a href="registro.html" class="
+          font-bold
+          " >Regístrate</a>
+        </p>
+      </form>
+    </div>
+  </div>
+
+
+<div class="
+  flex
+  flex-col
+  w-full
+  z-[100]
+  inset-0
+  h-full
+  justify-center
+  items-center
+  fixed
+  text-center
+  hidden
+  bg-[#03030363]
+  backdrop-blur-[3px]
+  " id = "viewVideo"
+  action = "click">
+  <iframe 
+  width="50%" 
+  height="50%" 
+  src="https://www.youtube.com/embed/aC--PMnQYE0?si=P0wEYNmmZR63SsxD" 
+  title="YouTube video player" 
+  frameborder="0" 
+  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+  referrerpolicy="strict-origin-when-cross-origin" allowfullscreen
+  class = "
+
+  "></iframe>
+  </div>
+
+
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@sweetalert2/theme-dark@5/dark.css">
+  <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+  <script src="javascript/index.js" defer></script>
+
+
+</body>
+
+
+</html>
