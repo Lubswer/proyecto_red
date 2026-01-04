@@ -18,7 +18,8 @@ formRegistro.addEventListener("submit", function(e) { e.preventDefault();
     title: 'Campos incompletos',
     text: 'Todos los campos son obligatorios',
     timer: 1000,
-    showConfirmButton: false
+    showConfirmButton: false,
+    heightAuto: false,
     });
     return;
     }
@@ -28,7 +29,8 @@ formRegistro.addEventListener("submit", function(e) { e.preventDefault();
     title: 'Contraseña incorrecta',
     text: 'Las contraseñas no coinciden',
     timer: 1000,
-    showConfirmButton: false
+    showConfirmButton: false,
+    heightAuto: false
     });
     return;
     }
@@ -60,6 +62,7 @@ Swal.fire({
     text: 'Tu cuenta ha sido creada correctamente',
     timer: 1000,
     showConfirmButton: false,
+    heightAuto: false
 }).then(() => {
     window.location.href = "index.html#cuadro-login";
 });
