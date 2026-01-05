@@ -1,131 +1,117 @@
-document.querySelectorAll('[id = "fotoPerfil"]').forEach(el => {
-    el.src = usuario.foto;
-});
+window.onload = function() {
+    console.log("Sistema ALU Perfil Cargado");
 
+    const modal = document.getElementById("modalEditar");
+    const btnAbrir = document.getElementById("btnEditarPerfil");
+    const btnCerrar = document.getElementById("cerrarModal");
+    const btnGuardar = document.getElementById("guardarCambios");
 
-document.getElementById("edadPerfil").textContent = "Edad: " + (usuario.edad || "") + " años";
-document.getElementById("semestrePerfil").textContent = "Semestre: " + (usuario.semestre || "");
-document.getElementById("carreraPerfil").textContent = "Carrera: " + (usuario.carrera || "");
-document.getElementById("frasePerfil").textContent = usuario.frase;
-document.querySelectorAll('[id="usuario"]').forEach(el => {el.textContent = usuario.usuario;});
-document.getElementById("emailPerfil").textContent = usuario.email; 
-document.getElementById("nombres").textContent = usuario.nombres;
+    // Función para actualizar todos los campos y fotos en la interfaz
+    function refrescarInterfaz() {
+        const user = JSON.parse(localStorage.getItem("datosUsuario"));
+        if (!user) return;
 
+        // Textos del perfil
+        if(document.getElementById("nombres")) document.getElementById("nombres").textContent = user.nombres || "Usuario";
+        if(document.getElementById("emailPerfil")) document.getElementById("emailPerfil").textContent = user.email || "correo@ejemplo.com";
+        if(document.getElementById("frasePerfil")) document.getElementById("frasePerfil").textContent = `"${user.frase || 'Sin descripción'}"`;
+        if(document.getElementById("edadPerfil")) document.getElementById("edadPerfil").textContent = user.edad || "--";
+        if(document.getElementById("semestrePerfil")) document.getElementById("semestrePerfil").textContent = user.semestre || "--";
+        if(document.getElementById("carreraPerfil")) document.getElementById("carreraPerfil").textContent = user.carrera || "--";
+        
+        // Secciones extra
+        if(document.getElementById("enseñar1")) document.getElementById("enseñar1").textContent = user.enseñar1 || "Sin asignar";
+        if(document.getElementById("aprender1")) document.getElementById("aprender1").textContent = user.aprender1 || "Sin asignar";
+        if(document.getElementById("proyecto1")) document.getElementById("proyecto1").textContent = user.proyecto1 || "Sin proyectos";
 
-document.getElementById("editFoto").addEventListener("change", (e) => {
-    const archivo = e.target.files[0];
-    if (!archivo) return;
-    document.getElementById("previewFoto").src = URL.createObjectURL(archivo);
-});
+        // Nombre de usuario en posts y miniaturas
+        document.querySelectorAll('[id="usuario"]').forEach(el => el.textContent = user.usuario || user.nombres);
 
+        // Actualizar fotos (grandes y pequeñas)
+        if (user.foto) {
+            document.querySelectorAll('#fotoPerfil').forEach(img => img.src = user.foto);
+        }
+    }
 
-// 1. Abrir modal
-document.getElementById("btnEditarPerfil").addEventListener("click", () => {
-    document.getElementById("modalEditar").style.display = "flex";
-    const usuario = JSON.parse(localStorage.getItem("datosUsuario"));
-    document.getElementById("editNombres").value = usuario.nombres || "";
-    document.getElementById("editNombre").value = usuario.usuario || "";
-    document.getElementById("editFrase").value = usuario.frase || "";
-    document.getElementById("editEdad").value = usuario.edad || "";
-    document.getElementById("editCarrera").value = usuario.carrera || "";
-    document.getElementById("editSemestre").value = usuario.semestre || "";
-    document.getElementById("editEnseñar1").value = usuario.enseñar1 || "";
-    document.getElementById("editEnseñar2").value = usuario.enseñar2 || "";
-    document.getElementById("editAprender1").value = usuario.aprender1 || "";
-    document.getElementById("editAprender2").value = usuario.aprender2 || "";
-    document.getElementById("editProyecto1").value = usuario.proyecto1 || "";
-    document.getElementById("editProyecto2").value = usuario.proyecto2 || "";
-    document.getElementById("editProyecto3").value = usuario.proyecto3 || "";
-    document.getElementById("editProyecto4").value = usuario.proyecto4 || "";
-});
+    // Carga inicial
+    refrescarInterfaz();
 
-// 2. Cerrar modal
-document.getElementById("cerrarModal").addEventListener("click", () => {
-    document.getElementById("modalEditar").style.display = "none";
-});
+    // Abrir Modal y rellenar inputs
+    if (btnAbrir) {
+        btnAbrir.onclick = function() {
+            modal.classList.remove("hidden");
+            const user = JSON.parse(localStorage.getItem("datosUsuario")) || {};
+            
+            document.getElementById("editNombres").value = user.nombres || "";
+            document.getElementById("editNombre").value = user.usuario || "";
+            document.getElementById("editFrase").value = user.frase || "";
+            document.getElementById("editEdad").value = user.edad || "";
+            document.getElementById("editCarrera").value = user.carrera || "";
+            document.getElementById("editSemestre").value = user.semestre || "";
+            document.getElementById("editEnseñar1").value = user.enseñar1 || "";
+            document.getElementById("editAprender1").value = user.aprender1 || "";
+            document.getElementById("editProyecto1").value = user.proyecto1 || "";
+            
+            if(user.foto) document.getElementById("previewFoto").src = user.foto;
+        };
+    }
 
-// 3. Guardar cambios
-document.getElementById("guardarCambios").addEventListener("click", () => {
-    const usuario = JSON.parse(localStorage.getItem("datosUsuario"));
+    // Cerrar Modal
+    if (btnCerrar) btnCerrar.onclick = () => modal.classList.add("hidden");
 
-    usuario.usuario = document.getElementById("editNombre").value;
-    usuario.nombres = document.getElementById("editNombres").value;
-    usuario.frase = document.getElementById("editFrase").value;
-    usuario.edad = document.getElementById("editEdad").value;
-    usuario.carrera = document.getElementById("editCarrera").value;
-    usuario.semestre = document.getElementById("editSemestre").value;
-    usuario.enseñar1 = document.getElementById("editEnseñar1").value;
-    usuario.enseñar2 = document.getElementById("editEnseñar2").value;
-    usuario.aprender1 = document.getElementById("editAprender1").value;
-    usuario.aprender2 = document.getElementById("editAprender2").value;
-    usuario.proyecto1 = document.getElementById("editProyecto1").value;
-    usuario.proyecto2 = document.getElementById("editProyecto2").value;
-    usuario.proyecto3 = document.getElementById("editProyecto3").value;
-    usuario.proyecto4 = document.getElementById("editProyecto4").value; 
-
-    const inputFoto = document.getElementById("editFoto");
-    // Si el usuario subió una foto...
-if (inputFoto.files && inputFoto.files[0]) {
-    const reader = new FileReader();
-
-    reader.onload = function(e) {
-        usuario.foto = e.target.result; // Guardamos la imagen como Base64
-        localStorage.setItem("datosUsuario", JSON.stringify(usuario));
-
-        actualizarFotos(usuario.foto); // función para refrescar imágenes
+    // Previsualizar foto en el modal
+    document.getElementById("editFoto").onchange = function(e) {
+        if (e.target.files && e.target.files[0]) {
+            const reader = new FileReader();
+            reader.onload = (event) => document.getElementById("previewFoto").src = event.target.result;
+            reader.readAsDataURL(e.target.files[0]);
+        }
     };
 
-    reader.readAsDataURL(inputFoto.files[0]);
-    
-} else {
-    // Si no subió nueva foto, solo actualizamos los textos
-    localStorage.setItem("datosUsuario", JSON.stringify(usuario));
-}
+    // BOTÓN GUARDAR CAMBIOS
+    if (btnGuardar) {
+        btnGuardar.onclick = function(e) {
+            e.preventDefault();
+            let user = JSON.parse(localStorage.getItem("datosUsuario")) || {};
 
+            // Capturar datos de texto
+            user.nombres = document.getElementById("editNombres").value;
+            user.usuario = document.getElementById("editNombre").value;
+            user.frase = document.getElementById("editFrase").value;
+            user.edad = document.getElementById("editEdad").value;
+            user.carrera = document.getElementById("editCarrera").value;
+            user.semestre = document.getElementById("editSemestre").value;
+            user.enseñar1 = document.getElementById("editEnseñar1").value;
+            user.aprender1 = document.getElementById("editAprender1").value;
+            user.proyecto1 = document.getElementById("editProyecto1").value;
 
+            const inputFoto = document.getElementById("editFoto");
 
+            const completarGuardado = () => {
+                localStorage.setItem("datosUsuario", JSON.stringify(user));
+                refrescarInterfaz();
+                modal.classList.add("hidden");
+                Swal.fire({
+                    icon: 'success',
+                    title: 'Perfil Actualizado',
+                    background: '#0a0a0a',
+                    color: '#fff',
+                    timer: 1500,
+                    showConfirmButton: false
+                });
+            };
 
-
-    // Guardar de nuevo
-    localStorage.setItem("datosUsuario", JSON.stringify(usuario));
-
-    // ACTUALIZAR VISUALMENTE (DOM)
-    document.getElementById("nombres").textContent = usuario.nombres;
-    document.querySelectorAll('[id="usuario"]').forEach(el => {el.textContent = usuario.usuario;});
-    document.getElementById("frasePerfil").textContent = usuario.frase;
-    document.getElementById("edadPerfil").textContent = "Edad: " + usuario.edad + " años";
-    document.getElementById("semestrePerfil").textContent = "Semestre: " + usuario.semestre;
-    document.getElementById("carreraPerfil").textContent = "Carrera: " + usuario.carrera;
-    document.getElementById("enseñar1").textContent = usuario.enseñar1;
-    document.getElementById("enseñar2").textContent = usuario.enseñar2;
-    document.getElementById("aprender1").textContent = usuario.aprender1;
-    document.getElementById("aprender2").textContent = usuario.aprender2;
-    document.getElementById("proyecto1").textContent = usuario.proyecto1;
-    document.getElementById("proyecto2").textContent = usuario.proyecto2;
-    document.getElementById("proyecto3").textContent = usuario.proyecto3;
-    document.getElementById("proyecto4").textContent = usuario.proyecto4;
-    function actualizarFotos(fotoBase64) {
-    // Actualizar foto grande
-    document.getElementById("fotoPerfil").src = fotoBase64;
-
-    // Actualizar todas las fotos pequeñas
-    document.querySelectorAll('[id = "fotoPerfil"]').forEach(el => {
-        el.src = fotoBase64;
-    });
-}
-
-
-
-    // Cerrar modal
-    document.getElementById("modalEditar").style.display = "none";
-
-    // Mensaje de éxito
-    Swal.fire({
-        icon: "success",
-        title: "Perfil actualizado",
-        timer: 1000,
-        showConfirmButton: false
-    });
-
-});
-
+            // Lógica asíncrona para la foto
+            if (inputFoto.files && inputFoto.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(event) {
+                    user.foto = event.target.result;
+                    completarGuardado();
+                };
+                reader.readAsDataURL(inputFoto.files[0]);
+            } else {
+                completarGuardado();
+            }
+        };
+    }
+};
